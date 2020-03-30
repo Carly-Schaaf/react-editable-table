@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 // STYLE IMPORTS
 import AddCircleIcon from '@material-ui/icons/AddCircle';

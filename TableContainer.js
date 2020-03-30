@@ -10,19 +10,9 @@ import { createAircraft, updateAircraft, fetchAircrafts, deleteAircrafts } from 
 import { clearAllErrors, fetchColumns } from '../../actions/ui_actions';
 import { addRow } from '../../actions/table_actions';
 
-const mstp = (state, ownProps) => {
-    // const rows = Object.values(Object.assign({}, state.entities[ownProps.tableName]));
-    
-    // if (state.ui.newRow) {
-    //     const newRow = Object.assign({}, rows[0]);
-    //     Object.keys(newRow).forEach(key => newRow[key] = null);
-    //     rows.unshift(newRow)
-    // }
-
-    return {
-        rows: Object.values(state.entities[ownProps.tableName])
-        // newRow: state.ui.newRow
-}};
+const mstp = (state, ownProps) => ({
+    rows: Object.values(state.entities[ownProps.tableName])
+});
 
 export default connect(mstp, { 
     fetchChemicals, 
